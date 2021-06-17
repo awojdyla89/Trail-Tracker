@@ -18,3 +18,16 @@
 .collection-item form {
   margin-top: -5px;
 }
+.navbar-fixed nav{
+  background-color: rgb(27, 27, 172);
+}
+.trail-tracker{
+  color:darksalmon;
+  font-size: 34px;
+  padding-left: 14px;
+}
+.login-logout{
+  color: darksalmon;
+ 
+}
+
