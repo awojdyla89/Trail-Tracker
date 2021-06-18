@@ -9,10 +9,10 @@
 .card .card-content .card-title {
   margin-bottom: 10px;
 }
-
+/* 
 #search-row form {
   padding-top: 20px;
-}
+} */
 
 .student-name {
   position: relative;
@@ -25,18 +25,19 @@
 .navbar-fixed nav{
   background-color: rgb(55, 138, 169);
 }
+
 .trail-tracker{
   color:darksalmon;
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Helvetica;
 }
 .login-logout{
   color: darksalmon;
   font-size: 29px;
   padding-right: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  Helvetica;
  
 }
 

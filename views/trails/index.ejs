@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Trail Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- Google Icon Fonts used by Materialize -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Materialize CSS Framework -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="stylesheets/style.css" />
+   <!-- JavaScript for Materialize -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav >
+      <div class="nav-wrapper">
+        <a href="" class="trail-tracker">Trail Tracker</a>
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+              <a href="/logout" class="login-logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google" class="login-logout"> Login with Google</a>
+
+            <% } %>       
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="flex-container">
+
+      <div class="flex-item"> 
+        
+          <td><a href="/trails/index" class="detail-button">User Trails</a></td>
+      </div>
+
+      <div class="flex-item" id="flex-middle">
+          <li>Trail Name 1</li>
+          <td><a href="/trails/ratings" class="detail-button">DETAILS</a></td>
+      </div>
+
+      <div class="flex-item">
+        <a href="/trails/new" class="detail-button">Add New Trail</a>
+      </div>
+  </div>
+
+</body>
+
+</html>
+
