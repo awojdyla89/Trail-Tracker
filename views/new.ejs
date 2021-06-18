@@ -14,7 +14,7 @@
 
 <body>
   <div class="navbar-fixed">
-    <nav>
+    <nav >
       <div class="nav-wrapper">
         <a href="" class="trail-tracker">Trail Tracker</a>
         <ul class="right">
@@ -23,12 +23,40 @@
               <a href="/logout" class="login-logout">Log Out</a>
             <% } else { %>
               <a href="/auth/google" class="login-logout"> Login with Google</a>
+
             <% } %>       
           </li>
         </ul>
       </div>
     </nav>
   </div>
+
+
+  <div class="flex-container">
+
+      <div class="flex-item"> 
+          <li>User Name</li>
+          <td><a href="/ratings" class="detail-button">User Trails</a></td>
+      </div>
+
+      <div class="flex-item" id="flex-middle">
+        
+          <label>Trail Name:
+            <input type="text" name="trailName" id="trail-name">
+            </label>
+            <label>Location (city, State):
+                <input type="text" name="location" id="location">
+                </label>
+                <label>Trail Length (Miles):
+                    <input type="number" name="length" min="0" max="9999" id="length">
+                    </label><br>
+          <td><a href="/ratings" class="detail-button">Add New Trail</a></td>
+      </div>
+
+      <div class="flex-item"></div>
+
+  </div>
+
 </body>
 
 </html>
