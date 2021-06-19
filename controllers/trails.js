@@ -21,8 +21,9 @@ function show(req, res){
   })
 }
 
+//  form is used in the new.ejs page 
 function create(req, res){
-
+console.log("HITS THE CREATE in new.ejs")
   const trail = new Trail(req.body);
   trail.user = req.user._id;
   trail.userId = req.user._id;
