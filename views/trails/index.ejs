@@ -11,7 +11,7 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <!-- Materialize CSS Framework -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="stylesheets/style.css" />
+   <link rel="stylesheet" href="/stylesheets/style.css" />
    <!-- JavaScript for Materialize -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
@@ -39,13 +39,18 @@
   <div class="flex-container">
 
       <div class="flex-item"> 
-        
-          <td><a href="/trails/index" class="detail-button">User Trails</a></td>
+        <h3>trails - index.ejs</h3>
+          <td><a href="/trails" class="detail-button">User Trails</a></td>
       </div>
 
       <div class="flex-item" id="flex-middle">
-          <li>Trail Name 1</li>
-          <td><a href="/trails/ratings" class="detail-button">DETAILS</a></td>
+
+        <% trails.forEach(t => { %>
+          <h5><%= t.trailName %></h5><a href="/trails/<%= t.id %> " method="GET" class="detail-button">DETAILS</a>
+        <% }) %>
+
+          <!-- <li>Trail Name 1</li> -->
+          <!-- <td><a href="/trails/ratings" class="detail-button">DETAILS</a></td> -->
       </div>
 
       <div class="flex-item">
