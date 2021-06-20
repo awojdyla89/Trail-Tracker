@@ -87,6 +87,18 @@
   border-left: 1px solid #CCCCCC;
   border-radius: 8px;
 }
+.detail-button-index {
+  font: bold 16px Helvetica;
+  text-decoration: none;
+  background-color: #75da70;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 8px;
+}
 
 #trail-name, #location, #length {
   font-size: 25px;
@@ -97,4 +109,22 @@
   display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
+}
+
+#flex-middle {
+  height:750px;
+  width:120px;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+}
+
+#index-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-gap: 2rem; */
+}
+#index-page div{
+  padding: 5px;
+  font-size: 25px;
 }
