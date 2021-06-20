@@ -62,15 +62,12 @@
   text-align: center;
   height: 750px;
 }
-#flex-middle{
+/* #flex-middle{
   width: 250px;
   margin-left: 3px;
   margin-right: 3px;
-  /* display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-   */
-}
+  
+} */
 #flex-middle label {
   font-size: 23px;
 }
@@ -121,6 +118,8 @@
   border:1px solid #ccc;
   font:16px/26px Georgia, Garamond, Serif;
   overflow:auto;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 /* #index-page {

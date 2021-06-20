@@ -14,6 +14,8 @@ router.post('/', trailsCtrl.create);
 // this is /trails/:id in the ratings.ejs
 router.get('/:id', trailsCtrl.show)
 
+// router.post('trails/:id', ratingsCtrl.create);
+
 
 
 module.exports = router;
