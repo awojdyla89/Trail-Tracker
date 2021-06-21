@@ -4,10 +4,21 @@ const Trail = require('../models/trail');
 
 module.exports = {
   
-  new: newRating,
+  create
   
 };
 
-// function newRating(req, res){
+ function create(req, res){
+Trail.findById(req.params.id, function(err, trailDocuments){
+    req.body.userId = req.user._id;
+    req.body.raterName = req.user.name;
 
-// }
+    //add the comment
+    trailDocuments.ratings.push(req.body);
+    trailDocuments.save(function(err){
+        res.redirect(`/trails/${trailDocuments._id}`);
+    })
+})
+
+
+ }

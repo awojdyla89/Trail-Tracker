@@ -12,7 +12,7 @@
  <!-- Google Icon Fonts used by Materialize -->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <!-- Materialize CSS Framework -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
  <link rel="stylesheet" href="/stylesheets/rating.css" />
  <!-- JavaScript for Materialize -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -38,49 +38,57 @@
   </div>
 
   <div class="flex-container">
+    
       <div class="flex-item flex-item-left"> 
-        
         <h5>trails- ratings.ejs</h5>
         <td><a href="/trails" class="detail-button">User Trails</a></td>
       </div>
-      <div class="flex-item" id="flex-middle">
-          <li>Trail Info</li>
 
+
+      <div class="flex-item" id="flex-middle">
+          <li>Trail Info</li><br>
           <section id="ratings-page">
             <div><b>Name: </b></div>
             <div><%= trail.trailName %></div>
             <div><b>Location: </b></div>
             <div><%= trail.location %></div>
             <div><b>Length: </b></div>
-            <div><%= trail.length %> Miles</div>
-            </section>
-            <section id="ratings-page">
+            <div><%= trail.trailLength %> Miles</div>
+          </section>
+          
+          <!-- create() ratings controller -->
+            <div id="ratings-page">
               <form action="/trails/<%= trail._id %>" method="POST">
-              <label>Comments:</label>
-              <textarea name="comment"></textarea>
-              
-              <label>Rating:
-              <select name="starRate">
+
+                <br><label>Date:</label>
+                <input type="datetime-local" name="date"><br>
+
+                <br><label>Comments:</label>
+                <textarea name="comment"></textarea><br>
+                
+                
+                <br><label>Rating:</label>
+                <select name="starRate" min="0" max="5">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option selected value="5">5</option>
-              </select>
-            </label>
-              <br>
-              <label>Date:
-              <input type="datetime-local" name="date">
-            </label>
-            <br>
-              <input type="submit" value="Add Rating">
-            </section>
-          </form>
+                  <option value="5">5</option>
+                </select><br>
+                
+                <br><button type="submit">ADD RATING</button>
+
+              </form>
+            </div>
+
+
       </div>
 
      <!-- ADD COMMENT COLUMN -->
      <div class="flex-item" id="flex-middle">
           <li>-Comment Info-</li>
+
+         
         </div>
         
   </div>

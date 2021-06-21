@@ -22,6 +22,7 @@ require('./config/passport');
 const indexRoutes = require('./routes/index');
 const usersRoutes = require('./routes/users');
 const trailsRoutes = require('./routes/trails');
+const ratingsRoutes = require('./routes/ratings')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,6 +44,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Add this middleware BELOW passport middleware
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
@@ -56,6 +63,7 @@ app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 //all routes start with /trails for example
 app.use('/trails', trailsRoutes);
+app.use('/trails', ratingsRoutes);
 
 
 // invalid request, send 404 page

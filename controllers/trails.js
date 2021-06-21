@@ -35,7 +35,7 @@ console.log("HITS THE CREATE in new.ejs")
 }
 
 function index(req, res){
-  console.log("HITTING controller-trails-index()")
+  console.log("HITS THE INDEX in index.ejs")
 
   Trail.find({}, function(err, trailDocuments){
     
