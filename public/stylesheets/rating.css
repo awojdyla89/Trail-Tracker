@@ -61,6 +61,7 @@
   font-size: 2em;
   text-align: center;
   height: 750px;
+  
 }
 /* #flex-middle{
   width: 250px;
@@ -68,9 +69,7 @@
   margin-right: 3px;
   
 } */
-#flex-middle label {
-  font-size: 23px;
-}
+
 
 .detail-button {
   font: bold 24px Helvetica;
@@ -121,6 +120,16 @@
   margin-left: 3px;
   margin-right: 3px;
 }
+
+#flex-middle label {
+  font-size: 20px;
+  text-align: left;
+}
+
+/* #flex-item-left{
+  width: 100px;
+} */
+
 
 /* #index-page {
   display: grid;
