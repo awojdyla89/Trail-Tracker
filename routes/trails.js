@@ -9,13 +9,23 @@ router.get('/', trailsCtrl.index);
 router.get('/new', trailsCtrl.new);
 
 //this is /trails/ in the new.ejs
-router.post('/', trailsCtrl.create);
+router.post('/', isLoggedIn, trailsCtrl.create);
 
 // this is /trails/:id in the ratings.ejs
 router.get('/:id', trailsCtrl.show)
 
 
 
+
+
+// authorizing the user to use a route
+// probably only want to use this on post, put or delete routes
+// create, update, delete 
+function isLoggedIn(req, res, next) {
+    // req.isAuthenticated() given to us by passport it return true or false 
+    if ( req.isAuthenticated() ) return next(); // if next() go to the next function in middleware
+    res.redirect('/auth/google');
+  }
 
 
 module.exports = router;

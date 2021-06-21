@@ -24,6 +24,11 @@
 }
 .navbar-fixed nav{
   background-color: rgb(55, 138, 169);
+  
+}
+.nav-wrapper{
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .trail-tracker{
@@ -36,7 +41,7 @@
 .login-logout{
   color: darksalmon;
   font-size: 29px;
-  padding-right: 20px;
+  /* padding-right: 20px; */
   font-family:  Helvetica;
  
 }
@@ -61,8 +66,11 @@
   font-size: 2em;
   text-align: center;
   height: 750px;
+  width: 30px;
   
 }
+
+
 /* #flex-middle{
   width: 250px;
   margin-left: 3px;
