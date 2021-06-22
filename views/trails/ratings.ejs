@@ -37,6 +37,12 @@
     </nav>
   </div>
 
+  <% if (user) { %> 
+    <h5>Welcome, <%= user.name %> </h5>
+      <% } else { %> 
+        <h5>Sign in - index.ejs</h5>
+        <% } %> 
+
   <div class="flex-container">
     
       <div class="flex-item"> 
@@ -58,7 +64,7 @@
 
           <!-- create() ratings controller -->
             <div id="ratings-page">
-              <form action="/trails/<%= trail._id %>" method="POST">
+              <form action="/ratings/<%= trail._id %>" method="POST">
 
                 <br><label>Date:</label>
                 <input type="datetime-local" name="date"><br>
@@ -84,6 +90,8 @@
 
       </div>
 
+
+      <% if (user) { %> 
      <!--  COMMENT COLUMN -->
      <div class="flex-item" id="flex-middle">
           <li>-Comment Info-</li>
@@ -97,7 +105,6 @@
                 <th>Comment</th>
                 <th>Rating</th>
               </tr>
-              
             </thead>
 
             <tbody>
@@ -108,13 +115,12 @@
                 <td><%= r.starRate %> </td>
                 <td><div class="comment">
                   <%= r.text %><br>
-                  <% if (r.userId.equals(user._id)) { %>
-                    <form action="/trails/<%= r._id %>?_method=DELETE" method="POST">
+                  
+                    <form action="/ratings/<%= r._id %>?_method=DELETE" method="POST">
                       <button type="submit">X</button>
                     </form>
-                  <% } %>
+                   
                 </div></td>
-                
               </tr>
               
              <% }) %> 
@@ -122,14 +128,56 @@
             </table>
             <% } else { %> 
               <h5>No Comments yet</h5>
-              
             <% } %> 
          
         </div>
 
-        
+        <% } else { %> 
+
+          <div class="flex-item" id="flex-middle">
+            <li>-Comment Info-</li>
+  
+            <% if(trail.ratings.length) { %> 
+              
+              <table>
+                <thead>
+                <tr>
+                  <th> Date</th>
+                  <th>Comment</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+  
+              <tbody>
+               <% trail.ratings.forEach(r => { %>
+                <tr>
+                  <td><%= r.date.toDateString() %> </td>
+                  <td><%= r.comment %> </td>
+                  <td><%= r.starRate %> </td>
+                  <td><div class="comment">
+                    <%= r.text %><br>
+                    
+                     
+                      
+                  </div></td>
+                </tr>
+                
+               <% }) %> 
+              </tbody>
+              </table>
+              <% } else { %> 
+                <h5>No Comments yet</h5>
+              <% } %> 
+           
+          </div>
+
+          <% } %> 
+
         
   </div>
 
 </body>
 </html>
+
+
+

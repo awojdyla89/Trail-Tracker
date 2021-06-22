@@ -3,12 +3,12 @@ const trailsCtrl = require('../controllers/trails');
 const ratingsCtrl = require('../controllers/ratings');
 
 
-// this is /trails/id for comments in the ratings.ejs
+// this is /ratings/id for comments in the ratings.ejs
 router.post('/:id', isLoggedIn, ratingsCtrl.create);
 
 
 
-// this is /trails/id in the ratings.ejs
+// this is /ratings/id in the ratings.ejs
 router.delete('/:id', isLoggedIn, ratingsCtrl.delete);
 
 // authorizing the user to use a route

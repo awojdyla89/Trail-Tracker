@@ -63,7 +63,7 @@ app.use('/', indexRoutes);
 app.use('/', usersRoutes);
 //all routes start with /trails for example
 app.use('/trails', trailsRoutes);
-app.use('/trails', ratingsRoutes);
+app.use('/ratings', ratingsRoutes);
 
 
 // invalid request, send 404 page
