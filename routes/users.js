@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const usersCtrl = require('../controllers/users');
 
-// GET /students
+
 router.get('/users', usersCtrl.index);
-router.post('/facts', isLoggedIn, usersCtrl.addFact);
+// router.post('/facts', isLoggedIn, usersCtrl.addFact);
 
 // authorizing the user to use a route
 // probably only want to use this on post, put or delete routes

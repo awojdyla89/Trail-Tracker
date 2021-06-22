@@ -2,17 +2,17 @@ const User = require('../models/user');
 
 module.exports = {
   index,
-  addFact
+  //addFact
 };
 
-function addFact(req, res){
-  req.user.facts.push(req.body);
-  //req.user is a mongoose documents
-  // we assigned the monggose document in passport.js in passport.deserializeUser()
-  req.user.save(function(err){
-    res.redirect('/users');
-  })
-}
+// function addFact(req, res){
+//   req.user.facts.push(req.body);
+//   //req.user is a mongoose documents
+//   // we assigned the monggose document in passport.js in passport.deserializeUser()
+//   req.user.save(function(err){
+//     res.redirect('/users');
+//   })
+// }
 
 function index(req, res, next) {
   console.log(req.query)
