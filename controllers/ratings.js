@@ -12,8 +12,18 @@ module.exports = {
 function deleteRating(req, res){
 
   console.log("HITTING DELETE RATING")
-    Trail.findByIdAndDelete(req.params.id, function(){
-      res.redirect('/ratings');
+
+    Trail.findOne({'ratings._id' :req.params.id}, function(err, trail){
+      const ratingSubdoc = trail.ratings.id(req.params.id);
+
+      if(!ratingSubdoc.userId.equals(req.user._id))
+      return res.redirect(`/trails/${trail._id}`);
+
+      ratingSubdoc.remove();
+
+      trail.save(function(err){
+        res.redirect(`/trails/${trail._id}`)
+      })
     })
   
 
