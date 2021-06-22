@@ -4,9 +4,20 @@ const Trail = require('../models/trail');
 
 module.exports = {
   
-  create
+  create,
+  delete: deleteRating
   
 };
+
+function deleteRating(req, res){
+
+  console.log("HITTING DELETE RATING")
+    Trail.findByIdAndDelete(req.params.id, function(){
+      res.redirect('/ratings');
+    })
+  
+
+}
 
  function create(req, res){
 Trail.findById(req.params.id, function(err, trailDocuments){

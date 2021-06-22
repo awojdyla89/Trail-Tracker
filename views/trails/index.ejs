@@ -35,7 +35,11 @@
     </nav>
   </div>
 
-  
+  <% if (user) { %> 
+    <h5>Welcome, <%= user.name %> </h5>
+      <% } else { %> 
+        <h5>Sign in - index.ejs</h5>
+        <% } %> 
 
 
         <% if (user) { %> 

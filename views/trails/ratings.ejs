@@ -84,7 +84,7 @@
 
       </div>
 
-     <!-- ADD COMMENT COLUMN -->
+     <!--  COMMENT COLUMN -->
      <div class="flex-item" id="flex-middle">
           <li>-Comment Info-</li>
 
@@ -106,6 +106,16 @@
                 <td><%= r.date.toDateString() %> </td>
                 <td><%= r.comment %> </td>
                 <td><%= r.starRate %> </td>
+                <td><div class="comment">
+                  <%= r.text %><br>
+                  <% if (r.userId.equals(user._id)) { %>
+                    <form action="/trails/<%= r._id %>?_method=DELETE" method="POST">
+                      <button type="submit">X</button>
+                    </form>
+                  <% } %>
+                </div></td>
+
+
               </tr>
               
              <% }) %> 
@@ -117,6 +127,8 @@
             <% } %> 
          
         </div>
+
+        
         
   </div>
 

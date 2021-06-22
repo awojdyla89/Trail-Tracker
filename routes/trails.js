@@ -15,8 +15,8 @@ router.post('/', isLoggedIn, trailsCtrl.create);
 router.get('/:id', trailsCtrl.show)
 
 
-
-router.delete('/:id', trailsCtrl.delete);
+// this is /trails/id in the index.ejs
+router.delete('/:id', isLoggedIn, trailsCtrl.delete);
 
 
 
