@@ -55,7 +55,11 @@
           <li>Trail Info</li><br>
           <section id="ratings-page">
             <div><b>Name: </b></div>
-            <div><%= trail.trailName %></div>
+            <div><%= trail.trailName %>
+              <form action="/trails/<%= trail._id %>/edit" >
+                <button type="submit">Edit</button>
+                    </form>
+            </div>
             <div><b>Location: </b></div>
             <div><%= trail.location %></div>
             <div><b>Length: </b></div>

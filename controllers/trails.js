@@ -8,9 +8,34 @@ module.exports = {
   new: newTrail,
   create,
   show, 
-  delete: deleteTrail
+  delete: deleteTrail,
+  edit,
+  update
   
 };
+
+function update(req, res){
+
+     // Note the cool "dot" syntax to query on the property of a subdoc
+     Trail.findById(req.params.id, function(err, trail) {
+      // if (!trail.userId.equals(req.user._id)) return res.redirect("/trails");
+      console.log(req.body.name, "REQQQQQQQQQQQQQQ")
+      trail.trailName = req.body.trailName
+       
+      trail.save(function(err) {
+        res.redirect(`/trails/${trail._id}`);
+      });
+    });
+}
+
+function edit(req, res){
+
+  Trail.findById(req.params.id, function(err, trail){
+    //console.log("userID: !!!!!>>>>", trail.userId, "user._id: ", req.user._id)
+    // if(!trail.userId.equals(req.user._id)) return res.redirect('/trails');
+    res.render('trails/edit', {trail});
+  })
+}
 
 function deleteTrail(req, res){
   Trail.findByIdAndDelete(req.params.id, function(){

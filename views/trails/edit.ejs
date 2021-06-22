@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Trail Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- Google Icon Fonts used by Materialize -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Materialize CSS Framework -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="/stylesheets/index.css" />
+   <!-- JavaScript for Materialize -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav >
+      <div class="nav-wrapper">
+        <a href="" class="trail-tracker">Trail Tracker</a>
+        <ul class="right">
+          <li>
+            <% if (user) { %>
+              <a href="/logout" class="login-logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google" class="login-logout"> Login with Google</a>
+
+            <% } %>       
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <% if (user) { %> 
+    <h5>Welcome, <%= user.name %> </h5>
+      <% } else { %> 
+        <h5>Sign in - edit.ejs</h5>
+        <% } %> 
+
+
+        <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Edit Name:</label>
+                <input class="form-control" type="text" name="trailName">
+            </div>
+           
+            
+            <div class="mb-3">
+                <button class="btn btn-secondary" type="submit">Update</button>
+            </div>
+        </form>
+
+    </body>
+
+    </html>

@@ -11,6 +11,8 @@ router.post('/:id', isLoggedIn, ratingsCtrl.create);
 // this is /ratings/id in the ratings.ejs
 router.delete('/:id', isLoggedIn, ratingsCtrl.delete);
 
+
+
 // authorizing the user to use a route
 // probably only want to use this on post, put or delete routes
 function isLoggedIn(req, res, next) {

@@ -18,6 +18,11 @@ router.get('/:id', trailsCtrl.show)
 // this is /trails/id in the index.ejs
 router.delete('/:id', isLoggedIn, trailsCtrl.delete);
 
+// this is /trails/id/edit in the index.ejs
+router.get('/:id/edit', isLoggedIn, trailsCtrl.edit);
+
+
+router.put('/:id', isLoggedIn, trailsCtrl.update);
 
 
 
