@@ -16,6 +16,10 @@ router.get('/:id', trailsCtrl.show)
 
 
 
+router.delete('/:id', trailsCtrl.delete);
+
+
+
 
 
 // authorizing the user to use a route

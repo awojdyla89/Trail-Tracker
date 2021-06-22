@@ -35,30 +35,69 @@
     </nav>
   </div>
 
+  
 
-  <div class="flex-container">
 
-      <div class="flex-item flex-item-left"> 
-        <h5>trails - index.ejs</h5>
-          <td><a href="/trails" class="detail-button">User Trails</a></td>
-      </div>
+        <% if (user) { %> 
+          <div class="flex-container">
 
-      <div class="flex-item" id="flex-middle">
-        <section id="index-page">
-        <% trails.forEach(t => { %>
-          <div><%= t.trailName %></div>
-          <div><a href="/trails/<%= t.id %> " method="GET" class="detail-button-index">DETAILS</a></div>
-        <% }) %>
+            <div class="flex-item flex-item-left"> 
+              <h5>trails - index.ejs</h5>
+                <td><a href="/trails" class="detail-button">User Trails</a></td>
+            </div>
+      
+            <div class="flex-item" id="flex-middle">
+              <section id="index-page">
+              <% trails.forEach(t => { %>
+                <div><%= t.trailName %></div>
 
-          <!-- <li>Trail Name 1</li> -->
-          <!-- <td><a href="/trails/ratings" class="detail-button">DETAILS</a></td> -->
-        </section>
-        </div>
+                <div>
+                  <a href="/trails/<%= t.id %> " method="GET" class="detail-button-index">DETAILS</a>
+      
+                  <form action="/trails/<%= t._id %>?_method=DELETE" class="delete-form"
+                    method="POST">
+                    <button type="submit">X</button>
+                </form>
+      
+                </div>
 
-      <div class="flex-item">
-        <a href="/trails/new" class="detail-button">Add New Trail</a>
-      </div>
+              <% }) %>
+              </section>
+              </div>
+      
+            <div class="flex-item">
+              <a href="/trails/new" class="detail-button">Add New Trail</a>
+            </div>
+
   </div>
+
+  <% } else { %> 
+
+   <div class="flex-container">
+
+  <div class="flex-item flex-item-left"> 
+    <h5>trails - index.ejs</h5>
+      <td><a href="/trails" class="detail-button">User Trails</a></td>
+  </div>
+
+  <div class="flex-item" id="flex-middle">
+    <section id="index-page">
+    <% trails.forEach(t => { %>
+      <div><%= t.trailName %></div>
+      <div><a href="/trails/<%= t.id %> " method="GET" class="detail-button-index">DETAILS</a></div>
+    <% }) %>
+    </section>
+    </div>
+
+  <div class="flex-item">
+    <a href="/trails/new" class="detail-button">Add New Trail</a>
+  </div>
+
+</div>
+
+
+    <% } %> 
+
 
 </body>
 

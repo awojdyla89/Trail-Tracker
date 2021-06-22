@@ -7,9 +7,16 @@ module.exports = {
   index,
   new: newTrail,
   create,
-  show
+  show, 
+  delete: deleteTrail
   
 };
+
+function deleteTrail(req, res){
+  Trail.findByIdAndDelete(req.params.id, function(){
+    res.redirect('/trails');
+  })
+}
 
 // shows the details of each trail on the ratings.ejs
 function show(req, res){
