@@ -16,8 +16,8 @@ const ratingSchema = new Schema({
     trailLength: Number,
       trailName: String,
       location: String,
+      usersTrail: {type: Schema.Types.ObjectId, ref: 'User'},
       
-      usersTrail: [{type: Schema.Types.ObjectId, ref: 'User'}],
       ratings: [ratingSchema]
   }, {
     timestamps: true

@@ -5,8 +5,8 @@ const passport = require('passport');
 router.get('/', function(req, res) {
   // Where do you want to go for the root route
   // in the student demo this was res.redirect('/students'), what do you want?
-  //res.redirect('/users')
-  res.redirect('/trails');
+  res.redirect('/trails')
+  //res.redirect('/trails');
 });
 
 // Google OAuth login route
@@ -28,7 +28,7 @@ router.get('/oauth2callback', passport.authenticate(
 router.get('/logout', function(req, res){
   req.logout();
   //res.redirect('/users');
-  res.redirect('/trails');
+  res.redirect('/users');
 });
 
 module.exports = router;
