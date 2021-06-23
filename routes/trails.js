@@ -8,11 +8,12 @@ router.get('/', trailsCtrl.index);
 //view form to create new trail - /trails/new
 router.get('/new', trailsCtrl.new);
 
-//this is /trails/ in the new.ejs
-router.post('/', isLoggedIn, trailsCtrl.create);
-
 // this is /trails/:id in the ratings.ejs
 router.get('/:id', trailsCtrl.show)
+
+
+//this is /trails/ in the new.ejs
+router.post('/', isLoggedIn, trailsCtrl.create);
 
 
 // this is /trails/id in the index.ejs
