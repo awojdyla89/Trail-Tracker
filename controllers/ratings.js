@@ -26,7 +26,6 @@ function deleteRating(req, res){
       })
     })
   
-
 }
 
  function create(req, res){

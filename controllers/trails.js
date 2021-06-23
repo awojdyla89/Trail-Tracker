@@ -18,7 +18,9 @@ function update(req, res){
 
      // Note the cool "dot" syntax to query on the property of a subdoc
      Trail.findById(req.params.id, function(err, trail) {
-      // if (!trail.userId.equals(req.user._id)) return res.redirect("/trails");
+           console.log("userID: !!!!!>>>>", trail.userId, "user._id: ", req.user._id)
+
+       //if (!trail.userId.equals(req.user._id)) return res.redirect("/trails");
       console.log(req.body.name, "REQQQQQQQQQQQQQQ")
       trail.trailName = req.body.trailName
        
@@ -31,7 +33,7 @@ function update(req, res){
 function edit(req, res){
 
   Trail.findById(req.params.id, function(err, trail){
-    //console.log("userID: !!!!!>>>>", trail.userId, "user._id: ", req.user._id)
+    //console.log("userID: !!!!!>>>>", trail.userId.toString(), "user._id: ", req.user._id)
     // if(!trail.userId.equals(req.user._id)) return res.redirect('/trails');
     res.render('trails/edit', {trail});
   })
