@@ -25,6 +25,15 @@
  
 }
 
+.row{
+  display: flex;
+  align-content: space-between;
+ }
+ .page-container{
+   display: flex;
+   align-content: space-between;
+ }
+
 .side-nav{
   background-color: darkgrey;
   border-radius: 10px;
