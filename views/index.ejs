@@ -13,34 +13,40 @@
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav >
+
+ 
+  
+    <nav>
       <div class="nav-wrapper">
-        <a href="" class="trail-tracker">Trail Tracker</a>
-        <ul class="right">
-          <li>
-            <% if (user) { %>
-              <a href="/logout" class="login-logout">Log Out</a>
-            <% } else { %>
-              <a href="/auth/google" class="login-logout"> Login with Google</a>
-              
-            <% } %>       
-          </li>
+        <a href="#" class="brand-logo">Trail Tracker</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+          <% if (user) { %>
+            <li><a href="/logout" class="login-logout">Log Out</a></li>
+          <% } else { %>
+            <li><a href="/auth/google" class="login-logout"> Login with Google</a></li>
+          <% } %>  
+
         </ul>
       </div>
     </nav>
-  </div>
 
-  <!-- testing git  -->
-    <% if (user) { %> 
-    <h5>Welcome, <%= user.name %> </h5>
-    <% } else { %> 
-      <h5>Sign in - OG index.ejs</h5>
-      <% } %> 
-      <td><a href="/trails" class="detail-button">User Trails</a></td>
-
-        
-
+    <!-- testing git  -->
+      <% if (user) { %> 
+      <h5>Welcome, <%= user.name %> </h5>
+      <% } else { %> 
+        <!-- <h5>Sign in - OG index.ejs</h5> -->
+        <% } %> 
+    <div class="background-image">
+    <div class="position">
+    <div class="background-image"></div>
+    <div class="login-prompt"><h5>Sign in - OG index.ejs</h5></div>
+    </div>
+    </div>
+   
+     
 </body>
 
 </html>
