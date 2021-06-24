@@ -1,58 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <title>Trail Tracker</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-   <!-- Google Icon Fonts used by Materialize -->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!-- Materialize CSS Framework -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="/stylesheets/index.css" />
-   <!-- JavaScript for Materialize -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Google Icon Fonts used by Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/stylesheets/edit.css" />
+  <!-- JavaScript for Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav >
-      <div class="nav-wrapper">
-        <a href="" class="trail-tracker">Trail Tracker</a>
-        <ul class="right">
-          <li>
-            <% if (user) { %>
-              <a href="/logout" class="login-logout">Log Out</a>
-            <% } else { %>
-              <a href="/auth/google" class="login-logout"> Login with Google</a>
 
-            <% } %>       
-          </li>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Trail Tracker</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+          <% if (user) { %>
+            <li><a href="/logout" class="login-logout">Log Out</a></li>
+          <% } else { %>
+            <li><a href="/auth/google" class="login-logout"> Login with Google</a></li>
+          <% } %>  
+
         </ul>
       </div>
     </nav>
-  </div>
-
-  <% if (user) { %> 
-    <h5>Welcome, <%= user.name %> </h5>
-      <% } else { %> 
-        <h5>Sign in - edit.ejs</h5>
-        <% } %> 
 
 
-        <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
+    <div class="container-pic">
+      <img src="/images/bikepage.png" class="image">
+      <div class="bottom-left">Bottom Left</div>
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-right">Bottom Right</div>
+      <div class="centered">
+
+
+
+        <!-- <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
             <div>
-                <label>Edit Name:</label>
+                <label>Edit Trail Name:</label>
                 <input type="text" name="trailName">
             </div>
            
-            
-            <div>
-                <button type="submit">Update</button>
+            <div><button type="submit">Update</button></div>
+        </form> -->
+
+        
+          <form class="col s12" action="/trails/<%= trail._id %>?_method=PUT" method="POST">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea placeholder="<%= trail.trailName %>" id="trailName" class="materialize-textarea" name="trailName"></textarea>
+                <label id="edit-trailName" for="textarea1">Edit Trail Name:</label>
+              </div>
+              <div><button type="submit">Update</button></div>
             </div>
-        </form>
+          </form>
+        
+        </div>
+
 
     </body>
 
