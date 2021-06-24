@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 
 <head>
   <title>Trail Tracker</title>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
- <!-- Google Icon Fonts used by Materialize -->
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <!-- Materialize CSS Framework -->
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
- <link rel="stylesheet" href="/stylesheets/rating.css" />
- <!-- JavaScript for Materialize -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Google Icon Fonts used by Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/stylesheets/rating.css" />
+  <!-- JavaScript for Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
-  <div class="navbar-fixed">
-    <nav >
-      <div class="nav-wrapper">
-        <a href="" class="trail-tracker">Trail Tracker</a>
-        <ul class="right">
-          <li>
-            <% if (user) { %>
-              <a href="/logout" class="login-logout">Log Out</a>
-            <% } else { %>
-              <a href="/auth/google" class="login-logout"> Login with Google</a>
 
-            <% } %>       
-          </li>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Trail Tracker</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+          <% if (user) { %>
+            <li><a href="/logout" class="login-logout">Log Out</a></li>
+          <% } else { %>
+            <li><a href="/auth/google" class="login-logout"> Login with Google</a></li>
+          <% } %>  
+
         </ul>
       </div>
     </nav>
-  </div>
 
   <% if (user) { %> 
     <h5>Welcome, <%= user.name %> </h5>
@@ -82,14 +76,24 @@
                 <textarea name="comment"></textarea><br>
                 
                 
-                <br><label>Rating:</label>
+                <!-- <br><label>Rating:</label>
                 <select name="starRate" min="0" max="5">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                </select><br>
+                </select><br> -->
+
+                <label>Rating</label>
+                <select class="browser-default" name="starRate">
+                <option value="" disabled selected>Rate Me</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                </select>
                 
                 <br><button type="submit">ADD RATING</button>
 

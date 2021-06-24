@@ -1,38 +1,22 @@
 * {
   box-sizing: border-box;
 }
+.nav-wrapper {
+  background-color: rgb(55, 138, 169);
+}
 
 .brand-logo {
   margin-left: 15px;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
-}
-/* 
-#search-row form {
-  padding-top: 20px;
-} */
-
-.student-name {
-  position: relative;
-  top: -5px;
-}
-
-.collection-item form {
-  margin-top: -5px;
-}
-.navbar-fixed nav{
-  background-color: rgb(55, 138, 169);
-}
-
-.trail-tracker{
+/* .trail-tracker{
   color:darksalmon;
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
   font-family:Helvetica;
-}
+} */
+
 .login-logout{
   color: darksalmon;
   font-size: 29px;
@@ -41,91 +25,100 @@
  
 }
 
-.flex-container {
-  padding: 0;
-  margin: 3px;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+.side-nav{
+  background-color: darkgrey;
+  border-radius: 10px;
+  
+  
+}
+.page-content{
+  background-color:rgb(189, 134, 95);
+  text-align: center;
+  border-radius: 10px;
+
+  
+}
+.page-container{
+   margin-right: 80px; 
+   padding-left: 20px;
+  
+   
+  
 }
 
-.flex-item {
-  flex-grow: 1;
-  background: darkkhaki;
-  border: 3px solid rgba(0,0,0,.2);
-  line-height: 100px;
+
+/* .background-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+ /* .background-image {
+  background-image: url("/images/bikepage.png");
+  background-repeat: no-repeat;
+  height: 93vh;
+  background-size: cover;
+  
+} 
+
+.login-prompt{
+  position:absolute;
+  margin: 0 auto;
+   top: 200px;
+  left: 590px; 
+}
+.position{
+  position: relative;
+} */
+
+/* Container holding the image and the text */
+
+body{
+  background-color: rgb(230, 211, 211);
+}
+.container-pic {
+  position: relative;
+  text-align: center;
   color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
-  height: 750px;
-  width: 30px;
 }
-#flex-middle{
-  width: 250px;
-  margin-left: 3px;
-  margin-right: 3px;
-  /* display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-   */
-}
-#flex-middle label {
-  font-size: 23px;
+.image{
+  width: 100%;
 }
 
-.detail-button {
-  font: bold 24px Helvetica;
-  text-decoration: none;
-  background-color: #75da70;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  border-radius: 8px;
-}
-.detail-button-index {
-  font: bold 16px Helvetica;
-  text-decoration: none;
-  background-color: #75da70;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  border-radius: 8px;
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
 }
 
-#trail-name, #location, #length {
-  font-size: 25px;
-  text-align: center;
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
-#ratings-page {
-  display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1rem;
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
 }
 
-#flex-middle {
-  height:750px;
-  width:120px;
-  border:1px solid #ccc;
-  font:16px/26px Georgia, Garamond, Serif;
-  overflow:auto;
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
 }
 
-#index-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  /* grid-gap: 2rem; */
-}
-#index-page div{
-  padding: 5px;
-  font-size: 25px;
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

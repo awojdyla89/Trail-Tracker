@@ -1,50 +1,30 @@
 * {
   box-sizing: border-box;
 }
+.nav-wrapper {
+  background-color: rgb(55, 138, 169);
+}
 
 .brand-logo {
   margin-left: 15px;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
-}
-/* 
-#search-row form {
-  padding-top: 20px;
-} */
-
-.student-name {
-  position: relative;
-  top: -5px;
-}
-
-.collection-item form {
-  margin-top: -5px;
-}
-.navbar-fixed nav{
-  background-color: rgb(55, 138, 169);
-  
-}
-.nav-wrapper{
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-.trail-tracker{
+/* .trail-tracker{
   color:darksalmon;
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
   font-family:Helvetica;
-}
+} */
+
 .login-logout{
   color: darksalmon;
   font-size: 29px;
-  /* padding-right: 20px; */
+  padding-right: 20px;
   font-family:  Helvetica;
  
 }
+
 
 .flex-container {
   padding: 0;
