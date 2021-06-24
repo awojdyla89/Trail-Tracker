@@ -31,16 +31,18 @@
       </div>
     </nav>
 
-  <% if (user) { %> 
-    <h5>Welcome, <%= user.name %> </h5>
-      <% } else { %> 
-        <h5>Sign in - index.ejs</h5>
-        <% } %> 
+  
 
   <div class="flex-container">
     
       <div class="flex-item"> 
         <h5>trails- ratings.ejs</h5>
+        <% if (user) { %> 
+          <h5>Welcome, <%= user.name %> </h5>
+            <% } else { %> 
+              <h5>Sign in - index.ejs</h5>
+              <% } %> 
+        
         <td><a href="/trails" class="detail-button">User Trails</a></td>
       </div>
 

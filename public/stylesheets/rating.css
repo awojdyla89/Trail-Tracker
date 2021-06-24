@@ -50,15 +50,6 @@
   
 }
 
-
-/* #flex-middle{
-  width: 250px;
-  margin-left: 3px;
-  margin-right: 3px;
-  
-} */
-
-
 .detail-button {
   font: bold 24px Helvetica;
   text-decoration: none;
@@ -113,18 +104,3 @@
   font-size: 20px;
   text-align: left;
 }
-
-/* #flex-item-left{
-  width: 100px;
-} */
-
-
-/* #index-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  
-} */
-/* #index-page div{
-  padding: 5px;
-  font-size: 25px;
-} */
