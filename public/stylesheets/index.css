@@ -29,16 +29,24 @@
   text-align: center;
   color: white;
   
+  
 }
 .image{
   width: 100%;
 }
 
+
 .row{
   display: flex;
   align-content: space-between;
-  position: relative;
-  bottom: 1070px;
+  /* position: relative;
+  bottom: 1070px; */
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1400px;
   
  }
  .page-container{
@@ -88,14 +96,7 @@
 body{
   background-color: rgb(230, 211, 211);
 }
-.container-pic {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.image{
-  width: 100%;
-}
+
 
 
 /* Bottom left text */
