@@ -29,6 +29,13 @@ function deleteRating(req, res){
 }
 
  function create(req, res){
+
+
+  if(req.body.date == ''){
+    let defaultDate =  new Date();
+    req.body.date = defaultDate;
+}
+
 Trail.findById(req.params.id, function(err, trailDocuments){
     req.body.userId = req.user._id;
     req.body.raterName = req.user.name;
