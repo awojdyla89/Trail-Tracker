@@ -24,10 +24,22 @@
   font-family:  Helvetica;
  
 }
+.container-pic {
+  position: relative;
+  text-align: center;
+  color: white;
+  
+}
+.image{
+  width: 100%;
+}
 
 .row{
   display: flex;
   align-content: space-between;
+  position: relative;
+  bottom: 1070px;
+  
  }
  .page-container{
    display: flex;
@@ -37,23 +49,13 @@
 .side-nav{
   background-color: darkgrey;
   border-radius: 10px;
-  
-  
 }
 .page-content{
   background-color:rgb(189, 134, 95);
   text-align: center;
-  border-radius: 10px;
+  border-radius: 10px; 
+}
 
-  
-}
-.page-container{
-   margin-right: 80px; 
-   padding-left: 20px;
-  
-   
-  
-}
 
 
 /* .background-image {
@@ -127,7 +129,7 @@ body{
 /* Centered text */
 .centered {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
