@@ -2,14 +2,14 @@ const router = require('express').Router();
 const trailsCtrl = require('../controllers/trails');
 
 // index.ejs in trails view - /trails/ 
-router.get('/', trailsCtrl.index);
+router.get('/', isLoggedIn, trailsCtrl.index);
 
 //this is /trails/new
 //view form to create new trail - /trails/new
-router.get('/new', trailsCtrl.new);
+router.get('/new', isLoggedIn, trailsCtrl.new);
 
 // this is /trails/:id in the ratings.ejs
-router.get('/:id', trailsCtrl.show)
+router.get('/:id', isLoggedIn, trailsCtrl.show)
 
 
 //this is /trails/ in the new.ejs
