@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="/stylesheets/rating.css" />
   <!-- JavaScript for Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -31,85 +34,89 @@
       </div>
     </nav>
 
-  
+    <div class="row">
 
-  <div class="flex-container">
-    
-      <div class="flex-item"> 
-        <h5>trails- ratings.ejs</h5>
+      <div class="col s3 side-nav">
+        <!-- Grey navigation panel -->
+        <div class="section">
+        <h5>trails - ratings.ejs</h5>
         <% if (user) { %> 
           <h5>Welcome, <%= user.name %> </h5>
             <% } else { %> 
               <h5>Sign in - index.ejs</h5>
               <% } %> 
-        
-        <td><a href="/trails" class="detail-button">User Trails</a></td>
+        </div>
+        <div class="divider"></div>
+
+        <div class="section">
+        <p><a href="/trails" class="detail-button">User Trails</a></p>
       </div>
-
-
-      <div class="flex-item" id="flex-middle">
-          <li>Trail Info</li><br>
-          <section id="ratings-page">
-            <div><b>Name: </b></div>
-            <div><%= trail.trailName %>
-
-              <% if(trail.usersTrail.equals(user._id)) {%> 
-
-              <form action="/trails/<%= trail._id %>/edit" >
-                <button type="submit">Edit</button>
-                    </form>
-
-                    <% } %> 
-            </div>
-            <div><b>Location: </b></div>
-            <div><%= trail.location %></div>
-            <div><b>Length: </b></div>
-            <div><%= trail.trailLength %> Mile(s)</div>
-          </section>
-
-          <!-- create() ratings controller -->
-            <div id="ratings-page">
-              <form action="/ratings/<%= trail._id %>" method="POST">
-
-                <br><label>Date:</label>
-                <input type="datetime-local" name="date"><br>
-
-                <br><label>Comments:</label>
-                <textarea name="comment"></textarea><br>
-                
-                
-                <!-- <br><label>Rating:</label>
-                <select name="starRate" min="0" max="5">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select><br> -->
-
-                <label>Rating</label>
-                <select class="browser-default" name="starRate">
-                <option value="" disabled selected>Rate Me</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-                <option value="4">Option 4</option>
-                <option value="5">Option 5</option>
-                </select>
-                
-                <br><button type="submit">ADD RATING</button>
-
-              </form>
-            </div>
-
+      <div class="divider"></div>
+      <div class="section">
+        <a href="/trails/new" class="detail-button">Add New Trail</a>
+      </div>
+      <div class="divider"></div>
 
       </div>
 
+    
 
-     
-     <!--  COMMENT COLUMN -->
-     <div class="flex-item" id="flex-middle">
-          <li>-Comment Info-</li>
+
+    <div class="container page-container">
+      <div class="col s6 rate-content">
+
+        <h5>Trail Info</h5><br>
+        <% if(trail.usersTrail.equals(user._id)) {%> 
+
+          <form action="/trails/<%= trail._id %>/edit" >
+            <button type="submit">Edit</button>
+                </form>
+
+                <% } %> 
+        <div class="divider"></div>
+        <div class="section">
+          <div><b>Name: </b></div>
+          <div><%= trail.trailName %></div>
+          <div><b>Location: </b></div>
+          <div><%= trail.location %></div>
+          <div><b>Length: </b></div>
+          <div><%= trail.trailLength %> Mile(s)</div>
+          <div class="divider"></div>
+          <div class="divider"></div>
+
+
+
+          <form action="/ratings/<%= trail._id %>" method="POST">
+
+            <br><label>Date:</label>
+            <input type="datetime-local" name="date"><br>
+
+            <br><label>Comments:</label>
+            <textarea name="comment"></textarea><br>
+
+            <label>Rating</label>
+            <select class="browser-default" name="starRate">
+            <option value="" disabled selected>Rate Me</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+            
+            <i class="fa fa-star"></i>
+            <br><button type="submit">ADD RATING</button>
+
+          </form>
+
+
+
+        </div>
+        </div>
+
+        <div class="col s4 comment-content">
+
+          <h5>-Comment Info-</h5>
 
           <% if(trail.ratings.length) { %> 
             
@@ -148,14 +155,19 @@
             <% } else { %> 
               <h5>No Comments yet</h5>
             <% } %> 
-         
+
+
         </div>
 
+        <!--  END <div class="row"> -->
+      </div>
 
-         
+      </div>
+      <!-- <i class="large material-icons">insert_chart</i>
+      star_border
+      stars -->
 
-        
-  </div>
+     
 
 </body>
 </html>
