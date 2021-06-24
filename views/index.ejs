@@ -34,18 +34,33 @@
     </nav>
 
     <!-- testing git  -->
-      <% if (user) { %> 
-      <h5>Welcome, <%= user.name %> </h5>
-      <% } else { %> 
-        <!-- <h5>Sign in - OG index.ejs</h5> -->
-        <% } %> 
-    <div class="background-image">
-    <div class="position">
+  
+      
+    
+    <!-- <div class="position">
     <div class="background-image"></div>
-    <div class="login-prompt"><h5>Sign in - OG index.ejs</h5></div>
+    <div class="login-prompt">
+
+      
     </div>
+    </div> -->
+    
+    <div class="container">
+      <img src="/images/bikepage.png" class="image">
+      <div class="bottom-left">Bottom Left</div>
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-right">Bottom Right</div>
+      <div class="centered">
+
+        <% if (user) { %> 
+          <h5>Welcome, <%= user.name %> </h5>
+          <% } else { %> 
+            <h5>Sign in - OG index.ejs</h5>
+            <% } %> 
+
+      </div>
     </div>
-   
      
 </body>
 
