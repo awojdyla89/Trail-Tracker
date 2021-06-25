@@ -6,6 +6,7 @@ Trail Tracker is a useful App that gives the ability for a trail enthusiast to k
 
 <img src="public/images/landing-page.png" width="470" height="350">
 <img src="public/images/trails-page.png" width="470" height="350">
+<img src="public/images/new-page.png" width="470" height="350">
 <img src="public/images/ratings-page.png" width="470" height="350">
 
 ## Technologies Used
