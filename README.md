@@ -13,6 +13,7 @@ Trail Tracker is a useful App that gives the ability for a trail enthusiast to k
 
 - JavaScript
 - EJS
+- HTML
 - CSS
 - Mongoose
 - MongoDB
@@ -24,7 +25,7 @@ Trail Tracker is a useful App that gives the ability for a trail enthusiast to k
 
 ## Getting Started
 
-- When the app loads please log into Google on the top right menu.
+- When the app loads please log into Google on the top right of the menu.
 
 
 ---
