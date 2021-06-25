@@ -61,11 +61,11 @@
         <div class="divider"></div>
 
         <div class="section">
-        <p><a href="/trails" class="detail-button">User Trails</a></p>
+        <p><a href="/trails" class="waves-effect waves-light btn-large side-nav-buttons">All Trails</a></p>
       </div>
       <div class="divider"></div>
       <div class="section">
-        <a href="/trails/new" class="detail-button">Add New Trail</a>
+        <a href="/trails/new" class="waves-effect waves-light btn-large side-nav-buttons">Add New Trail</a>
       </div>
       <div class="divider"></div>
 
@@ -80,18 +80,18 @@
         <div class="divider"></div>
         <div class="section">
           <% trails.forEach(t => { %>
-            <h6><%= t.trailName %></h6>
+            <div><h6><%= t.trailName %></h6></div>
           
             <p><div>
-              <a href="/trails/<%= t.id %> " method="GET" class="detail-button-index">DETAILS</a>
-  
+              <a href="/trails/<%= t.id %> " method="GET"  class="btn-floating btn-medium waves-effect waves-light green darken-1 detail-button-index"><i class="material-icons">pageview</i></a>
+              </div></p><br>
                <% if(t.usersTrail.equals(user._id)) {%> 
               <form action="/trails/<%= t._id %>?_method=DELETE" class="delete-form" method="POST">
-              <button type="submit">X</button>
+              <div><button type="submit" class="waves-effect waves-light btn"><i class="material-icons">delete</i></button></div><br>
               </form>
           <% } %> 
-           </div></p>
-          <div class="divider"></div>
+           
+          <div class="divider"></div><br>
           <% }) %>
          
       </div>

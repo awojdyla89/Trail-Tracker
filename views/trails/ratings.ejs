@@ -54,11 +54,11 @@
         <div class="divider"></div>
 
         <div class="section">
-        <p><a href="/trails" class="detail-button">User Trails</a></p>
+        <p><a href="/trails" class="waves-effect waves-light btn-large side-nav-buttons">All Trails</a></p>
       </div>
       <div class="divider"></div>
       <div class="section">
-        <a href="/trails/new" class="detail-button">Add New Trail</a>
+        <a href="/trails/new" class="waves-effect waves-light btn-large side-nav-buttons">Add New Trail</a>
       </div>
       <div class="divider"></div>
 
@@ -74,7 +74,7 @@
         <% if(trail.usersTrail.equals(user._id)) {%> 
 
           <form action="/trails/<%= trail._id %>/edit" >
-            <button type="submit">Edit</button>
+            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons">border_color</i>Edit</button>
                 </form>
 
                 <% } %> 

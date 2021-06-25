@@ -39,7 +39,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1500px;
+  width: 1400px;
   height: 500px;
  }
 
@@ -49,11 +49,38 @@
 }
 
 .side-nav{
-  background-color: darkgrey;
+  background-color: rgba(101, 116, 96, 0.701);
   border-radius: 10px;
 }
+
+.side-nav-buttons{
+  font-size: 25px;
+  border-radius: 10px;
+}
+.add-trail-button{
+  
+  background-color: rgba(98, 98, 128, 0.666);
+  font-size: 20px;
+  
+}
+#add-trail-button-value{
+  color: whitesmoke;
+  padding-top: 15px;
+}
+#new-trail-form label{
+  font-size: 26px;
+  color: rgb(220, 194, 145);
+}
+
+#trail-name, #location, #length{
+  
+  text-align: center;
+  font-size: 25px;
+  color: rgb(199, 242, 98);
+}
+
 .rate-content{
-  background-color:rgb(189, 134, 95);
+  background-color:rgba(101, 116, 96, 0.701);
   /* text-align:justify; */
   border-radius: 10px; 
 }

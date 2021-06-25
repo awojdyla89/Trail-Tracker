@@ -54,48 +54,29 @@
   background-color: darkgrey;
   border-radius: 10px;
 }
+.side-nav-buttons{
+  font-size: 25px;
+}
 .page-content{
   background-color:rgb(189, 134, 95);
   text-align: center;
   border-radius: 10px; 
 }
 
+.section div h6{
+  float: left;
+  padding-right: 12px;
+}
+.section div button{
+  float: left;
+  background-color: black;
+}
+
+.detail-button-index{
+  float: right;
+  
+}
+
 body{
   background-color: rgb(230, 211, 211);
-}
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
