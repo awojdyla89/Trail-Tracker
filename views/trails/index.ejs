@@ -15,11 +15,9 @@
 <body>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Trail Tracker</a>
+        <a href="#" class="brand-logo" id="logo">Trail Tracker</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+       
           <% if (user) { %>
             <li><a href="/logout" class="login-logout">Log Out</a></li>
           <% } else { %>
@@ -29,15 +27,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- <div class="container-pic">
-      <img src="/images/bikepage.png" class="image">
-      <div class="bottom-left">Bottom Left</div>
-      <div class="top-left">Top Left</div>
-      <div class="top-right">Top Right</div>
-      <div class="bottom-right">Bottom Right</div>
-      <div class="centered"></div>
-    </div> -->
 
 
     <div class="container-pic">
@@ -75,19 +64,19 @@
       <div class="container page-container">
       <div class="col s9 page-content">
         <!-- Teal page content  -->
-        <h5>Trails</h5>
+        <h3>Trails</h3>
 
         <div class="divider"></div>
         <div class="section">
           <% trails.forEach(t => { %>
-            <div><h6><%= t.trailName %></h6></div>
+            <div class="trail-name"><%= t.trailName %></div>
           
             <p><div>
-              <a href="/trails/<%= t.id %> " method="GET"  class="btn-floating btn-medium waves-effect waves-light green darken-1 detail-button-index"><i class="material-icons">pageview</i></a>
+              <a href="/trails/<%= t.id %> " method="GET"  class="btn-floating btn-medium waves-effect waves-light grey darken-1 detail-button-index"><i class="material-icons">pageview</i></a>
               </div></p><br>
                <% if(t.usersTrail.equals(user._id)) {%> 
               <form action="/trails/<%= t._id %>?_method=DELETE" class="delete-form" method="POST">
-              <div><button type="submit" class="waves-effect waves-light btn"><i class="material-icons">delete</i></button></div><br>
+              <div><button type="submit" class="waves-effect waves-light   btn"><i class="material-icons">delete</i></button></div><br>
               </form>
           <% } %> 
            

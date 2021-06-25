@@ -9,13 +9,14 @@
   margin-left: 15px;
 }
 
-/* .trail-tracker{
-  color:darksalmon;
+#logo{
+  /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
   font-family:Helvetica;
-} */
+ 
+}
 
 .login-logout{
   color: darksalmon;
