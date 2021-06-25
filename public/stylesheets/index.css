@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .nav-wrapper {
-  background-color: rgb(55, 138, 169);
+  background-color: rgb(84, 124, 138);
 }
 
 .brand-logo {
@@ -18,13 +18,6 @@
  
 }
 
-/* .trail-tracker{
-  color:darksalmon;
-  font-size: 38px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family:Helvetica;
-} */
 
 .login-logout{
   color: darksalmon;
@@ -66,6 +59,7 @@
 .side-nav-buttons{
   font-size: 25px;
   background-color: gray;
+  border-radius: 10px;
 }
 .page-content{
   background-color:rgba(230, 149, 27, 0.584);
@@ -81,7 +75,8 @@
 }
 .section div button{
   float: left;
-  background-color: black;
+color: black;
+
   
 }
 

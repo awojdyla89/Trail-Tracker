@@ -9,13 +9,13 @@
   margin-left: 15px;
 }
 
-/* .trail-tracker{
-  color:darksalmon;
+#logo{
+  /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
   font-family:Helvetica;
-} */
+}
 
 .login-logout{
   color: darksalmon;
@@ -41,13 +41,11 @@
 .row{
   display: flex;
   align-content: space-between;
-  
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1500px;
-  
  }
 
 
@@ -57,37 +55,77 @@
 }
 
 .side-nav{
-  background-color: darkgrey;
+  background-color: rgba(222, 205, 207, 0.824);
   border-radius: 10px;
 }
 
 .side-nav-buttons{
   font-size: 25px;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.add-rating{
+  background-color: grey;
+  font-size: 19px;
+  color: white;
+  border-radius: 8px;
 }
 
 .rate-content{
-  background-color:rgb(189, 134, 95);
+  background-color: rgba(222, 205, 207, 0.824);
   /* text-align:justify; */
   border-radius: 10px; 
 }
 .comment-content{
-  background-color: cornflowerblue;
+  background-color: rgba(222, 205, 207, 0.824);
   text-align: center;
   border-radius: 10px; 
 }
 
 .section div{
   float: left;
-  padding-right: 6px;
+  padding-right: 14px;
+  font-size: 23px;
 }
 .section label{
   font-size: 20px;
-  color:darkblue
+  font-weight: bold;
+  color:rgb(62, 55, 4)
 }
 .dropdown-rate{
   width: 100px;
+  height: 30px;
+  
+}
+.comment-box{
+  text-align: center;
+  font-size: 22px;
+  color: rgb(119, 147, 56);
+  height: 70px;
+  width: 380px;
 }
 
-body{
-  background-color: rgb(113, 134, 191);
+.comment-header{
+  font-size: 19px;
+
 }
+.delete-comment{
+  background-color: black;
+}
+
+
+body{
+  background-color: rgb(22, 37, 80);
+}
+
+.trail-info{
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.edit-trail{
+  font-size: 14;
+  background-color: grey;
+}
+

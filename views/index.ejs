@@ -18,9 +18,7 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Trail Tracker</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+        
           <% if (user) { %>
             <li><a href="/logout" class="login-logout">Log Out</a></li>
           <% } else { %>
@@ -31,34 +29,19 @@
       </div>
     </nav>
 
-    <!-- testing git  -->
-  
-      
-    
-    <!-- <div class="position">
-    <div class="background-image"></div>
-    <div class="login-prompt">
-
-      
-    </div>
-    </div> -->
-    
     <div class="container-pic">
       <img src="/images/bikepage.png" class="image">
-      <div class="bottom-left">Bottom Left</div>
-      <div class="top-left">Top Left</div>
-      <div class="top-right">Top Right</div>
-      <div class="bottom-right">Bottom Right</div>
+    
       <div class="centered">
-        <p><h5>Welcome to Trail Tracker. A place to keep 
-          keep tabs on the trails you've shredded!</h5>
+        <p><h5>Welcome to Trail Tracker.<br><br> A place to keep 
+           tabs on the trails you've shredded! <br><br>Please Login!</h5>
         </p>
 
-        <% if (user) { %> 
+        <!-- <% if (user) { %> 
           <h5>Welcome, <%= user.name %> </h5>
           <% } else { %> 
             <h5>Please Login! - OG index.ejs</h5>
-            <% } %> 
+            <% } %>  -->
 
       </div>
     </div>

@@ -19,11 +19,9 @@
 
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Trail Tracker</a>
+        <a href="#" class="brand-logo" id="logo">Trail Tracker</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+      
           <% if (user) { %>
             <li><a href="/logout" class="login-logout">Log Out</a></li>
           <% } else { %>
@@ -70,15 +68,15 @@
     <div class="container page-container">
       <div class="col s5 rate-content">
 
-        <h5>Trail Info</h5><br>
+        <div class="trail-info">Trail Info</div>
         <% if(trail.usersTrail.equals(user._id)) {%> 
 
           <form action="/trails/<%= trail._id %>/edit" >
-            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons">border_color</i>Edit</button>
+            <button type="submit" class="waves-effect waves-light btn edit-trail"><i class="material-icons">border_color</i>Edit</button><br>
                 </form>
 
                 <% } %> 
-        <div class="divider"></div>
+        <br><div class="divider"></div>
         <div class="section">
           <div><b>Name:</b></div>
           <div><%= trail.trailName %></div><br><br>
@@ -98,7 +96,7 @@
             <input type="datetime-local" name="date"><br>
 
             <br><label>Comments:</label>
-            <textarea name="comment"></textarea><br>
+            <textarea name="comment" class="comment-box"></textarea><br>
 
             <label>Rating</label>
             <select class="browser-default dropdown-rate" name="starRate">
@@ -110,26 +108,23 @@
             <option value="5">5</option>
             </select>
             
-            <i class="fa fa-star"></i>
-            <br><button type="submit">ADD RATING</button>
+            <!-- <i class="fa fa-star"></i> -->
+            <br><button type="submit" class="waves-effect waves-light btn-large add-rating">ADD RATING</button>
 
           </form>
-
-
-
         </div>
         </div>
 
         <div class="col s5 comment-content">
 
-          <h5>-Comment Info-</h5>
+          <h5>Comments</h5>
 
           <% if(trail.ratings.length) { %> 
             
             <table>
               <thead>
-              <tr>
-                <th> Date</th>
+              <tr class="comment-header">
+                <th>Date</th>
                 <th>Comment</th>
                 <th>Rating</th>
               </tr>
@@ -140,7 +135,7 @@
               <p><tr>
                 <td><%= r.date.toDateString() %> </td>
                 <td><%= r.comment %> </td>
-                <td><%= r.starRate %> </td>
+                <td><%= r.starRate %> / 5</td>
                 <td><div class="comment">
                   <%= r.text %><br>
                   
@@ -148,7 +143,7 @@
                   <% if(r.userId.equals(user._id)) {%> 
 
                     <form action="/ratings/<%= r._id %>?_method=DELETE" method="POST">
-                      <button type="submit">X</button>
+                      <button type="submit" class="waves-effect waves-light red  delete-comment"><i class="material-icons">delete</i></button>
                     </form>
                     <% } %> 
                    

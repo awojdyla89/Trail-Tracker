@@ -9,13 +9,14 @@
     margin-left: 15px;
   }
   
-  /* .trail-tracker{
-    color:darksalmon;
+
+  #logo{
+    /* color:darksalmon; */
     font-size: 38px;
     padding-left: 20px;
     font-weight: bold;
     font-family:Helvetica;
-  } */
+  }
   
   .login-logout{
     color: darksalmon;
@@ -41,38 +42,9 @@
   .page-container{
      margin-right: 80px; 
      padding-left: 20px;
-    
-     
-    
   }
   
-  
-  /* .background-image {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  } */
-  
-   /* .background-image {
-    background-image: url("/images/bikepage.png");
-    background-repeat: no-repeat;
-    height: 93vh;
-    background-size: cover;
-    
-  } 
-  
-  .login-prompt{
-    position:absolute;
-    margin: 0 auto;
-     top: 200px;
-    left: 590px; 
-  }
-  .position{
-    position: relative;
-  } */
-  
-  /* Container holding the image and the text */
+
   
   body{
     background-color: rgb(242, 236, 236);
@@ -133,4 +105,10 @@
 
   #edit-trailName{
       font-size: 30px;  
+  }
+
+  .update-button{
+    background-color: grey;
+    font-size: 21px;
+    
   }
