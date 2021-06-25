@@ -39,7 +39,7 @@ body {
   width: 100%;
 }
 
-.row {
+/* .row {
   display: flex;
   align-content: space-between;
   position: absolute;
@@ -47,6 +47,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1500px;
+} */
+
+.row {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
 }
 
 .page-container {
