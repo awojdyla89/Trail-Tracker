@@ -64,6 +64,11 @@ body {
   background-color: gray;
   border-radius: 10px;
 }
+.new-trail{
+  font-size: 22px;
+  background-color: gray;
+  border-radius: 10px;
+}
 
 .add-rating {
   background-color: grey;
