@@ -36,18 +36,9 @@ body {
 }
 
 .image {
+  display:block;
   width: 100%;
 }
-
-/* .row {
-  display: flex;
-  align-content: space-between;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1500px;
-} */
 
 .row {
   position: absolute;

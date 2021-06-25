@@ -34,7 +34,6 @@ body {
   position: relative;
   text-align: center;
   color: white;
-  
 }
 
 .image {
@@ -42,16 +41,6 @@ body {
   width: 100%;
 }
 
-/* .row {
-  display: flex;
-  align-content: space-between;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1400px;
-  
-} */
 .row {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
