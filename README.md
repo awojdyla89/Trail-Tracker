@@ -1,12 +1,12 @@
 # Trail Tracker
 
-Trail Tracker is a useful App for allowing users to keep track of the trails that have ventured on.
+Trail Tracker is a useful App that gives the ability for a trail enthusiast to keep track of the trails they have ventured on!
 
-## Wireframe ScreenShot
+## Wireframe ScreenShots
 
-<img src="/images/landing-page.png" width="450" height="350">
-<img src="/images/trails-page.png" width="450" height="350">
-<img src="/images/ratings-page.png" width="450" height="350">
+<img src="public/images/landing-page.png" width="470" height="350">
+<img src="public/images/trails-page.png" width="470" height="350">
+<img src="public/images/ratings-page.png" width="470" height="350">
 
 ## Technologies Used
 
@@ -23,17 +23,15 @@ Trail Tracker is a useful App for allowing users to keep track of the trails tha
 
 ## Getting Started
 
-- Press the "start" button to begin game play.
-- When you lose you will be prompted with what level you accomplished and your score.
-- Press the "start" button again to try and beat your high score.
-- The "start" button will keep the "high score" and reset your "current score" to zero.
-- The "reset" button will restart the game with "high score" and "current score" set to zero. 
+- When the app loads please log into Google on the top right menu.
+
 
 ---
 
-### Link to Simon Game
+### Links to Trail Tracker and Trello Board
 
 [Trail Tracker](https://project2comp.herokuapp.com/users)
+
 [Trello Board](https://trello.com/b/dZ2K18qn/trail-tracker)
 
 
@@ -42,6 +40,6 @@ Trail Tracker is a useful App for allowing users to keep track of the trails tha
 ## Next Steps
 
 1. Create functionality to edit entire trail information based on logged in user.
-2. Create functionality to edit comments based on logged in user
-2. Connect API of trails for logged in users to search from and add to their profile 
+2. Create functionality to edit comments based on logged in user.
+2. Connect database of known trails for logged in users to search from and add to their profile. 
 
