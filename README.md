@@ -33,14 +33,15 @@ Trail Tracker is a useful App for allowing users to keep track of the trails tha
 
 ### Link to Simon Game
 
-[Click me to play game](https://awojdyla89.github.io/Simon/)
+[Trail Tracker](https://project2comp.herokuapp.com/users)
+[Trello Board](https://trello.com/b/dZ2K18qn/trail-tracker)
+
 
 ---
 
 ## Next Steps
 
-1. Create a 'player name' field with input functionality.
-2. Create a counter to show running total of levels completed.
-2. Add sound to the Simon buttons. 
-3. Create a menu which allows a player to choose different sound themes.
-4. Create different levels of difficulty.
+1. Create functionality to edit entire trail information based on logged in user.
+2. Create functionality to edit comments based on logged in user
+2. Connect API of trails for logged in users to search from and add to their profile 
+
