@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .nav-wrapper {
   background-color: rgb(84, 124, 138);
 }
@@ -9,83 +10,78 @@
   margin-left: 15px;
 }
 
-#logo{
+#logo {
   /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
-  font-family:Helvetica;
- 
+  font-family: Helvetica;
 }
 
-
-.login-logout{
+.login-logout {
   color: darksalmon;
   font-size: 29px;
   padding-right: 20px;
-  font-family:  Helvetica;
+  font-family: Helvetica;
 }
+
+body {
+  background-color: rgb(63, 170, 228);
+}
+
 .container-pic {
   position: relative;
   text-align: center;
   color: white;
 }
-.image{
+
+.image {
   width: 100%;
 }
 
-.row{
+.row {
   display: flex;
   align-content: space-between;
-  /* position: relative;
-  bottom: 1070px; */
-
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1400px;
-  
- }
- .page-container{
-   display: flex;
-   align-content: space-between;
- }
+}
 
-.side-nav{
+.page-container {
+  display: flex;
+  align-content: space-between;
+}
+
+.side-nav {
   background-color: rgba(230, 149, 27, 0.584);
   border-radius: 10px;
 }
-.side-nav-buttons{
+
+.side-nav-buttons {
   font-size: 25px;
   background-color: gray;
   border-radius: 10px;
 }
-.page-content{
-  background-color:rgba(230, 149, 27, 0.584);
+
+.page-content {
+  background-color: rgba(230, 149, 27, 0.584);
   text-align: center;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
-.trail-name{
+.trail-name {
   float: left;
   font-size: 22px;
   font-weight: bold;
-  
 }
-.section div button{
+
+.section div button {
   float: left;
-color: black;
-
-  
+  color: black;
 }
 
-.detail-button-index{
+.detail-button-index {
   float: right;
-  
-  
-}
-
-body{
-  background-color: rgb(63, 170, 228);
 }

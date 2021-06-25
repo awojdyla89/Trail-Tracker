@@ -9,85 +9,58 @@
   margin-left: 15px;
 }
 
-/* .trail-tracker{
-  color:darksalmon;
+#logo {
+  /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
-  font-family:Helvetica;
-} */
+  font-family: Helvetica;
+}
 
-.login-logout{
+.login-logout {
   color: darksalmon;
   font-size: 29px;
   padding-right: 20px;
-  font-family:  Helvetica;
- 
+  font-family: Helvetica;
 }
 
-.side-nav{
-  background-color: darkgrey;
-  border-radius: 10px;
-  
-  
-}
-.page-content{
-  background-color:rgb(189, 134, 95);
-  text-align: center;
-  border-radius: 10px;
-
-  
-}
-.page-container{
-   margin-right: 80px; 
-   padding-left: 20px;
-  
-   
-  
-}
-
-
-/* .background-image {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
- /* .background-image {
-  background-image: url("/images/bikepage.png");
-  background-repeat: no-repeat;
-  height: 93vh;
-  background-size: cover;
-  
-} 
-
-.login-prompt{
-  position:absolute;
-  margin: 0 auto;
-   top: 200px;
-  left: 590px; 
-}
-.position{
-  position: relative;
-} */
-
-/* Container holding the image and the text */
-
-body{
+body {
   background-color: rgb(230, 211, 211);
 }
+
+h5 {
+  font-size: 34px;
+  color: black;
+}
+
+.side-nav {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+.page-content {
+  background-color: rgb(189, 134, 95);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.page-container {
+  margin-right: 80px;
+  padding-left: 20px;
+}
+
+
+
 .container-pic {
   position: relative;
   text-align: center;
   color: white;
 }
-.image{
+
+.image {
   width: 100%;
 }
 
-
-/* Centered text */
 .centered {
   position: absolute;
   top: 20%;
@@ -95,7 +68,3 @@ body{
   transform: translate(-50%, -50%);
 }
 
-h5 {
-  font-size: 34px;
-  color: black;
-}

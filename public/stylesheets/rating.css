@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .nav-wrapper {
   background-color: rgb(120, 166, 182);
 }
@@ -9,36 +10,36 @@
   margin-left: 15px;
 }
 
-#logo{
+#logo {
   /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
-  font-family:Helvetica;
+  font-family: Helvetica;
 }
 
-.login-logout{
+.login-logout {
   color: darksalmon;
   font-size: 29px;
   padding-right: 20px;
-  font-family:  Helvetica;
- 
+  font-family: Helvetica;
 }
 
+body {
+  background-color: rgb(22, 37, 80);
+}
 
 .container-pic {
   position: relative;
   text-align: center;
   color: white;
-  
-  
 }
-.image{
+
+.image {
   width: 100%;
 }
 
-
-.row{
+.row {
   display: flex;
   align-content: space-between;
   position: absolute;
@@ -46,59 +47,61 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1500px;
- }
+}
 
-
-.page-container{
+.page-container {
   display: flex;
   align-content: space-between;
 }
 
-.side-nav{
+.side-nav {
   background-color: rgba(222, 205, 207, 0.824);
   border-radius: 10px;
 }
 
-.side-nav-buttons{
+.side-nav-buttons {
   font-size: 25px;
   background-color: gray;
   border-radius: 10px;
 }
 
-.add-rating{
+.add-rating {
   background-color: grey;
   font-size: 19px;
   color: white;
   border-radius: 8px;
 }
 
-.rate-content{
+.rate-content {
   background-color: rgba(222, 205, 207, 0.824);
   /* text-align:justify; */
-  border-radius: 10px; 
-}
-.comment-content{
-  background-color: rgba(222, 205, 207, 0.824);
-  text-align: center;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
-.section div{
+.comment-content {
+  background-color: rgba(222, 205, 207, 0.824);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.section div {
   float: left;
   padding-right: 14px;
   font-size: 23px;
 }
-.section label{
+
+.section label {
   font-size: 20px;
   font-weight: bold;
-  color:rgb(62, 55, 4)
+  color: rgb(62, 55, 4);
 }
-.dropdown-rate{
+
+.dropdown-rate {
   width: 100px;
   height: 30px;
-  
 }
-.comment-box{
+
+.comment-box {
   text-align: center;
   font-size: 22px;
   color: rgb(119, 147, 56);
@@ -106,26 +109,20 @@
   width: 380px;
 }
 
-.comment-header{
+.comment-header {
   font-size: 19px;
-
 }
-.delete-comment{
+
+.delete-comment {
   background-color: black;
 }
 
-
-body{
-  background-color: rgb(22, 37, 80);
-}
-
-.trail-info{
+.trail-info {
   font-size: 29px;
   font-weight: bold;
 }
 
-.edit-trail{
+.edit-trail {
   font-size: 14;
   background-color: grey;
 }
-

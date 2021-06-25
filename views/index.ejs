@@ -3,12 +3,8 @@
 
 <head>
   <title>Trail Tracker</title>
-  <!-- Google Icon Fonts used by Materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  <!-- JavaScript for Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
@@ -16,7 +12,7 @@
 
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Trail Tracker</a>
+        <a href="#" class="brand-logo" id="logo">Trail Tracker</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
         
           <% if (user) { %>
@@ -33,19 +29,11 @@
       <img src="/images/bikepage.png" class="image">
     
       <div class="centered">
-        <p><h5>Welcome to Trail Tracker.<br><br> A place to keep 
-           tabs on the trails you've shredded! <br><br>Please Login!</h5>
-        </p>
-
-        <!-- <% if (user) { %> 
-          <h5>Welcome, <%= user.name %> </h5>
-          <% } else { %> 
-            <h5>Please Login! - OG index.ejs</h5>
-            <% } %>  -->
-
-      </div>
+        <p><h5>Welcome to Trail Tracker.<br><br> A place to for bike
+        enthusiasts to keep track of trails they've shredded! 
+        <br><br>Please Login.</h5></p>
+     </div>
     </div>
      
 </body>
-
 </html>

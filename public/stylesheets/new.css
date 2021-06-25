@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .nav-wrapper {
   background-color: rgb(72, 112, 125);
 }
@@ -9,31 +10,36 @@
   margin-left: 15px;
 }
 
-#logo{
+#logo {
   /* color:darksalmon; */
   font-size: 38px;
   padding-left: 20px;
   font-weight: bold;
-  font-family:Helvetica;
- 
+  font-family: Helvetica;
 }
 
-.login-logout{
+.login-logout {
   color: darksalmon;
   font-size: 29px;
   padding-right: 20px;
-  font-family:  Helvetica;
+  font-family: Helvetica;
 }
+
+body {
+  background-color: rgb(250, 242, 10);
+}
+
 .container-pic {
   position: relative;
   text-align: center;
   color: white;
 }
-.image{
+
+.image {
   width: 100%;
 }
 
-.row{
+.row {
   display: flex;
   align-content: space-between;
   position: absolute;
@@ -42,78 +48,68 @@
   transform: translate(-50%, -50%);
   width: 1400px;
   height: 500px;
- }
+}
 
-.page-container{
+.page-container {
   display: flex;
   align-content: space-between;
 }
 
-.side-nav{
+.side-nav {
   background-color: rgba(101, 116, 96, 0.701);
   border-radius: 10px;
 }
 
-.side-nav-buttons{
+.side-nav-buttons {
   font-size: 25px;
   border-radius: 10px;
 }
-.add-trail-button{
-  
+
+.add-trail-button {
   background-color: rgba(98, 98, 128, 0.666);
   font-size: 20px;
-  
 }
-#add-trail-button-value{
+
+#add-trail-button-value {
   color: whitesmoke;
   padding-top: 15px;
 }
-#new-trail-form label{
+
+#new-trail-form label {
   font-size: 26px;
   color: rgb(220, 194, 145);
 }
 
-#trail-name, #location, #length{
-  
+#trail-name,
+#location,
+#length {
   text-align: center;
   font-size: 25px;
   color: rgb(199, 242, 98);
 }
 
-.rate-content{
-  background-color:rgba(101, 116, 96, 0.701);
+.rate-content {
+  background-color: rgba(101, 116, 96, 0.701);
   /* text-align:justify; */
-  border-radius: 10px; 
-}
-.comment-content{
-  background-color: cornflowerblue;
-  text-align: center;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
-.section div{
+.comment-content {
+  background-color: cornflowerblue;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.section div {
   float: left;
   padding-right: 6px;
 }
-.section label{
+
+.section label {
   font-size: 20px;
-  color:darkblue
+  color: darkblue;
 }
-.dropdown-rate{
+
+.dropdown-rate {
   width: 100px;
 }
-
-body{
-  background-color: rgb(250, 242, 10);
-}
-
-
-
-
-
-
-
-
-
-
-

@@ -1,114 +1,78 @@
 * {
-    box-sizing: border-box;
-  }
-  .nav-wrapper {
-    background-color: rgb(55, 138, 169);
-  }
-  
-  .brand-logo {
-    margin-left: 15px;
-  }
-  
+  box-sizing: border-box;
+}
 
-  #logo{
-    /* color:darksalmon; */
-    font-size: 38px;
-    padding-left: 20px;
-    font-weight: bold;
-    font-family:Helvetica;
-  }
-  
-  .login-logout{
-    color: darksalmon;
-    font-size: 29px;
-    padding-right: 20px;
-    font-family:  Helvetica;
-   
-  }
-  
-  .side-nav{
-    background-color: darkgrey;
-    border-radius: 10px;
-    
-    
-  }
-  .page-content{
-    background-color:rgb(189, 134, 95);
-    text-align: center;
-    border-radius: 10px;
-  
-    
-  }
-  .page-container{
-     margin-right: 80px; 
-     padding-left: 20px;
-  }
-  
+.nav-wrapper {
+  background-color: rgb(55, 138, 169);
+}
 
-  
-  body{
-    background-color: rgb(242, 236, 236);
-  }
-  .container-pic {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  .image{
-    width: 100%;
-    /* height: 870px; */
-  }
-  
-  
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  }
-  
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-  }
-  
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.brand-logo {
+  margin-left: 15px;
+}
 
-  #trailName{
-      width: 400px;
-      font-size: 21px;
-      padding-top: 30px;
-  }
-  
+#logo {
+  /* color:darksalmon; */
+  font-size: 38px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Helvetica;
+}
 
-  #edit-trailName{
-      font-size: 30px;  
-  }
+.login-logout {
+  color: darksalmon;
+  font-size: 29px;
+  padding-right: 20px;
+  font-family: Helvetica;
+}
 
-  .update-button{
-    background-color: grey;
-    font-size: 21px;
-    
-  }
+body {
+  background-color: rgb(242, 236, 236);
+}
+
+.side-nav {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+.page-content {
+  background-color: rgb(189, 134, 95);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.page-container {
+  margin-right: 80px;
+  padding-left: 20px;
+}
+
+.container-pic {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.image {
+  width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#trailName {
+  width: 400px;
+  font-size: 21px;
+  padding-top: 30px;
+}
+
+#edit-trailName {
+  font-size: 30px;
+}
+
+.update-button {
+  background-color: grey;
+  font-size: 21px;
+}
